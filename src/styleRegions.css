@@ -20,6 +20,7 @@ header{
     color: white;
     background-color: #0C1C3E;
     font-size: 22px;
+    text-decoration: none;
     cursor: pointer;
     width: 75px;
     height: 25px;
@@ -95,59 +96,60 @@ body{
 }
 
                     /* TYPE BUTTONS */
-#type_normal{
+#normal{
     background-color: #AAAA99;
-    
+    display: flex;
+    align-self: flex-start;
 }
-#type_fire{
+#fire{
     background-color: #FF4422;
 }
-#type_water{
+#water{
     background-color: #3399FF;
 }
-#type_electric{
+#electric{
     background-color: #FFCC33;
 }
-#type_grass{
+#grass{
     background-color: #77CC55;
 }
-#type_ice{
+#ice{
     background-color: #66CCFF;
 }
-#type_fighting{
+#fighting{
     background-color: #BB5544;
 }
-#type_poison{
+#poison{
     background-color: #AA5599;
 }
-#type_ground{
+#ground{
     background-color: #DDBB55;
 }
-#type_flying{
+#flying{
     background-color: #8899FF;
 }
-#type_psychic{
+#psychic{
     background-color: #FD5497;
 }
-#type_bug{
+#bug{
     background-color: #AABB22;
 }
-#type_rock{
+#rock{
     background-color: #BBAA66;
 }
-#type_ghost{
+#ghost{
     background-color: #6666BB;
 }
-#type_dragon{
+#dragon{
     background-color: #7766EE;
 }
-#type_dark{
+#dark{
     background-color: #775544;
 }
-#type_steel{
+#steel{
     background-color: #AAAABB;
 }
-#type_fairy{
+#fairy{
     background-color: #EE99EE;
 }
 #container_pokedex_kanto{
@@ -172,6 +174,11 @@ body{
     height: 50px;
     width: 50px; 
 }
+
+
+
+
+
 
 /* 
 #container_gen{
