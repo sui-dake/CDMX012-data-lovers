@@ -46,52 +46,26 @@ import data from './data/pokemon/pokemon.js';
 //     let jolteon = document.getElementById("bulbasaur");        
 //     jolteon.innerHTML = buscados;
 // }
+
+
+
             //////INTENTARE ESTO OKIS///////
-  const nodoIvysaur = document.getElementById('ivysaur')
-  const filtroPorNombre = document.getElementById('searchbtn').value
-  const goBtn = document.querySelector('.search_go')
+//   const filtroPorNombre = document.getElementById('searchbtn').value
+//   const goBtn = document.querySelector('.search_go')
   
-  let todoElHTML=""    
-  
-  data.pokemon.forEach(pkmn =>{
-      todoElHTML+= unown(pkmn)
-  })
+ 
+// goBtn.addEventListener("click", () => {
+//     let recibo ="";
+//     filtroNombre(data.pokemon.name, filtroPorNombre).forEach(pokefiltrado =>{
+//         recibo+=unown(pokefiltrado);
+//     })
+//     nodoIvysaur.innerHTML = recibo
+// })
 
-nodoIvysaur.innerHTML=todoElHTML
-goBtn.addEventListener("click", () => {
-    let recibo ="";
-    filtroNombre(data.pokemon.name, filtroPorNombre).forEach(pokefiltrado =>{
-        recibo+=unown(pokefiltrado);
-    })
-    nodoIvysaur.innerHTML = recibo
-})
-
-        ///////////Obteniendo los pkm de Kanto en pantalla/////////////
-    let pkdx = '';
-    for (let p = 0; p < 10; p++){
-             pkdx += `<img src="${data.pokemon[p].img}">` +`${data.pokemon[p].name}`;
-            
-             let pikadex = document.getElementById("ivysaur");        
-             pikadex.innerHTML = pkdx;
-             
-        }
-
-        ///////Obteniendo los pkm de Johto en pantalla//////
-    // let dex2 = '';
-    // for (let j = 0; j < 1; j++){
-    //         dex2 += `<img src="${data.pokemon[j].img}">`;
-    //         let pichu = document.getElementById("bulbasaur2");
-    //         pichu.innerHTML = dex2;
-    //     }
-     //  let normal2 = data.pokemon.filter(normal)
-
-
-
+    
 const pikachu = document.getElementById("bulbasaur");
-const entei = document.getElementById("ivysaur"); //PORQUE PUSE ENTEI??
+const entei = document.getElementById("bulbasaur"); 
 const raichu = document.getElementById("options");
-
-
 
 
 
@@ -125,33 +99,56 @@ raichu.addEventListener('change', (evento)=>{
 })
 
 
-let dex = '';
-let dexx= ""; // HICE ESTO NUEVO PERO TA MAL 
 
-// function borrar(){   REMOVE FIRST CHILD??? O  jQuery empty()
-//     document.getElementById("bulbasaur").display = 'none';
-// }
+let dexx= ""; 
+
+
+
+const nodoIvysaur = document.getElementById('bulbasaur')
+let todoElHTML=""    
+
+data.pokemon.forEach(pkmn =>{
+    todoElHTML+= unown(pkmn)
+})
+
+nodoIvysaur.innerHTML=todoElHTML
 
 function drawPokemon (arreglo){
+    if(dexx == ''){
+    for(let i = 0; i < arreglo.length; i++){
+        
+        dexx += `${arreglo[i].name}
+         <img src="${arreglo[i].img}">`;
+         entei.innerHTML=dexx;     
+        }
+    }else if(dexx !== '')
+    {entei.innerHTML = '';
+    dexx = '';
     for(let i = 0; i < arreglo.length; i++){
         dexx += `${arreglo[i].name}
          <img src="${arreglo[i].img}">`;
-        entei.innerHTML=dexx;     //AQUI IBA PIKACHU
+         entei.innerHTML=dexx;     
         }
+    } 
+    
  }
 
-entei.innerHTML=dexx;  //AQUI PIKACHU Y DEC=X
 
 
 const botones = document.querySelectorAll(".type_button");
+ botones.innerHTML = " ";
 const cuandoSeHaceClick = function (evento) {
-    if (evento.target.id == "normal"){
+    if (evento.target.id == "normal"){   
     drawPokemon(data.pokemon.filter(normal))
+    
 }else if (evento.target.id == "fire"){
-    drawPokemon(data.pokemon.filter(fire)) 
+    drawPokemon(data.pokemon.filter(fire))
+    
 }else if (evento.target.id == "water"){
     drawPokemon(data.pokemon.filter(water))  
+    
 }else if (evento.target.id == "electric"){
+    
     drawPokemon(data.pokemon.filter(electric))   
 }else if (evento.target.id == "grass"){
     drawPokemon(data.pokemon.filter(grass))

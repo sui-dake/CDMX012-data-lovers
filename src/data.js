@@ -5,7 +5,7 @@ export  const normal = (token) => {
     return true;
   } 
     return false;
-};
+  };
 
 export  const fire = (token) => {
   if (token.type[0] == 'fire' ) {
@@ -14,6 +14,7 @@ export  const fire = (token) => {
     return true;
   } 
     return false;
+
 };
 
 export  const water = (token) => {

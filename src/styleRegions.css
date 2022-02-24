@@ -254,8 +254,8 @@ body{
     gap: 5em;
 }
 #ejemplo{
-    display: flex;
-    flex-direction: column;
+    /* display: flex;
+    flex-direction: column; */
     text-align: center;
     font-family: "lato", sans-serif;
     font-size: 20px;
