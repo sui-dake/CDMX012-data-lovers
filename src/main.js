@@ -48,7 +48,8 @@ import data from './data/pokemon/pokemon.js';
 // }
             //////INTENTARE ESTO OKIS///////
   const nodoIvysaur = document.getElementById('ivysaur')
-  const filtroPorNombre = document.getElementById('searchbtn')
+  const filtroPorNombre = document.getElementById('searchbtn').value
+  const goBtn = document.querySelector('.search_go')
   
   let todoElHTML=""    
   
@@ -57,9 +58,9 @@ import data from './data/pokemon/pokemon.js';
   })
 
 nodoIvysaur.innerHTML=todoElHTML
-filtroPorNombre.addEventListener("change", (event) => {
-    let recibo =""
-    filtroNombre(data.pokemon.nombre, event.target.value).forEach(function(pokefiltrado){
+goBtn.addEventListener("click", () => {
+    let recibo ="";
+    filtroNombre(data.pokemon.name, filtroPorNombre).forEach(pokefiltrado =>{
         recibo+=unown(pokefiltrado);
     })
     nodoIvysaur.innerHTML = recibo
@@ -224,7 +225,7 @@ const cuandoSeHaceClick = function (evento) {
 // console.table(sorting(data.pokemon));
 //console.table(sorting_asc(data.pokemon));
 //console.table(sort_name_asc(data.pokemon));
-console.log(temporalFilter (allPokes, pokeType));
+// console.log(temporalFilter (allPokes, pokeType));
 
 
 

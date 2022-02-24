@@ -263,6 +263,7 @@ body{
     text-transform: capitalize;
     background: #d2ecd7;
     opacity: 90%;
+    border: 2px solid rgb(231, 250, 223);
 }
 #card_name{
     font-size: 30px;
