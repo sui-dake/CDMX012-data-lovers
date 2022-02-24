@@ -14,15 +14,14 @@ header{
 .btn_header{
     display: flex;
     justify-content: space-between; 
-    border: 2px solid white;
+    border: 1px solid white;
     border-radius: 10px;
     padding: 4px 40px;
     color: white;
     background-color: #0C1C3E;
-    font-size: 22px;
+    font-size: 18px;
     text-decoration: none;
-    width: 90px;
-    height: 25px;
+    cursor: pointer;
     text-align: center;
     font-family: "lato", sans-serif;
 }
@@ -116,6 +115,7 @@ body{
     height: 240px;
     width: 458px;
     padding: 50px;
+
 }
 #img_johto{
     height: 240px;

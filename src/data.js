@@ -175,6 +175,8 @@ export  const fairy = function (token) {
 
 /// ESTAS SI SIRVEN :)   ///
 
+
+
 export const sorting = (pkmn) => {
   return pkmn.sort((a, b) => { 
   if (a.num > b.num){
@@ -217,3 +219,34 @@ export const sort_name_dsc = (pkmn) => {
   })} ;
 
 
+  export function celebi(pkmn){
+    return `<div id= ejemplo><h3 id="card_name">${pkmn.name}</h3>
+     <img src="${pkmn.img}">${pkmn.generation.name}
+     <br><p id="type_button">${pkmn.type}
+     </p>
+    </div> `
+  }
+             /////////TODO ESTO ES NUEVO//////
+  export function filtroNombre(lucario, criterioCoincidencia){
+   return lucario.filter(function(riolu){
+   return riolu.name == criterioCoincidencia
+   })
+  }
+  
+  export function  unown(pkmn){
+    return `${pkmn.name}
+     <img src="${pkmn.img}">
+     `
+  }
+
+
+  export function temporalFilter (allPokes, pokeType) {
+    let pokesWithType = [];
+    allPokes.forEach((pokemon) => {
+      let type = pokemon.type;
+      if (type.includes(pokeType)) {
+        pokesWithType.push(pokemon);
+    }
+  
+    return pokesWithType;
+  })}
