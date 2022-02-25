@@ -20,24 +20,17 @@ import { dragon } from './data.js';
 import { dark } from './data.js';
 import { steel } from './data.js';
 import { fairy } from './data.js';
+import { region_johto } from './data.js';
+import { region_kanto } from './data.js';
 import { celebi } from './data.js';
-import { unown } from './data.js';
 import {filtroNombre} from './data.js';
-import {temporalFilter} from './data.js';
 import data from './data/pokemon/pokemon.js';
 
-// document.getElementById("Kanto").onclick = function() {
-//         document.getElementById("Kanto").style.display = "none";
-//     }
-// document.getElementById("Johto").onclick = function() {
-//         document.getElementById("Johto").style.display = "none";
-//     }
 
  ///////////// SEARCH BUTTON FUNCTION ////////////
 // let search_val = document.getElementById('searchbtn')
 // console.log(search_val);
  
-
 // document.getElementsByClassName('search_1').onclick = funcionquenohemosinventado
 // function funcionquenohemosinventado (chain){
     
@@ -47,17 +40,13 @@ import data from './data/pokemon/pokemon.js';
 //     jolteon.innerHTML = buscados;
 // }
 
-
-
-            //////INTENTARE ESTO OKIS///////
 //   const filtroPorNombre = document.getElementById('searchbtn').value
 //   const goBtn = document.querySelector('.search_go')
   
- 
 // goBtn.addEventListener("click", () => {
 //     let recibo ="";
 //     filtroNombre(data.pokemon.name, filtroPorNombre).forEach(pokefiltrado =>{
-//         recibo+=unown(pokefiltrado);
+//         recibo+=celebi(pokefiltrado);
 //     })
 //     nodoIvysaur.innerHTML = recibo
 // })
@@ -67,13 +56,14 @@ const pikachu = document.getElementById("bulbasaur");
 const entei = document.getElementById("bulbasaur"); 
 const raichu = document.getElementById("options");
 
-
-
-
+          //////Ordenando pokemones numerica y alfabeticamente ////
 let mew = '';
 let mew2 = '';
 let mew3 = '';
 let mew4 = '';
+let dexx = ""; 
+let todoElHTML =""; 
+
 raichu.addEventListener('change', (evento)=>{
     if(evento.target.value == 'sort_name_asc'){
     sort_name_asc(data.pokemon, evento.target.value ).forEach(mewtwo =>{
@@ -92,47 +82,33 @@ raichu.addEventListener('change', (evento)=>{
         mew4 += celebi(mewtwo)
         pikachu.innerHTML=mew4;
     })}
-    
-    console.log(celebi); 
-    
-    
 })
 
 
-
-let dexx= ""; 
-
-
-
-const nodoIvysaur = document.getElementById('bulbasaur')
-let todoElHTML=""    
+const nodoIvysaur = document.getElementById('bulbasaur')   
 
 data.pokemon.forEach(pkmn =>{
-    todoElHTML+= unown(pkmn)
+    todoElHTML+= celebi(pkmn)
 })
 
 nodoIvysaur.innerHTML=todoElHTML
 
 function drawPokemon (arreglo){
     if(dexx == ''){
-    for(let i = 0; i < arreglo.length; i++){
-        
-        dexx += `${arreglo[i].name}
-         <img src="${arreglo[i].img}">`;
+        arreglo.forEach(type =>{
+        dexx += celebi(type);
          entei.innerHTML=dexx;     
-        }
+        })
     }else if(dexx !== '')
     {entei.innerHTML = '';
     dexx = '';
-    for(let i = 0; i < arreglo.length; i++){
-        dexx += `${arreglo[i].name}
-         <img src="${arreglo[i].img}">`;
+    arreglo.forEach(type =>{
+        dexx += celebi(type);
          entei.innerHTML=dexx;     
-        }
+        })
     } 
     
  }
-
 
 
 const botones = document.querySelectorAll(".type_button");
@@ -140,15 +116,11 @@ const botones = document.querySelectorAll(".type_button");
 const cuandoSeHaceClick = function (evento) {
     if (evento.target.id == "normal"){   
     drawPokemon(data.pokemon.filter(normal))
-    
 }else if (evento.target.id == "fire"){
-    drawPokemon(data.pokemon.filter(fire))
-    
+    drawPokemon(data.pokemon.filter(fire))  
 }else if (evento.target.id == "water"){
-    drawPokemon(data.pokemon.filter(water))  
-    
-}else if (evento.target.id == "electric"){
-    
+    drawPokemon(data.pokemon.filter(water))     
+}else if (evento.target.id == "electric"){ 
     drawPokemon(data.pokemon.filter(electric))   
 }else if (evento.target.id == "grass"){
     drawPokemon(data.pokemon.filter(grass))
@@ -178,26 +150,17 @@ const cuandoSeHaceClick = function (evento) {
     drawPokemon(data.pokemon.filter(steel))
 }else if (evento.target.id == "fairy"){
     drawPokemon(data.pokemon.filter(fairy))
+}else if (evento.target.id == "kanto"){
+    drawPokemon(data.pokemon.filter(region_kanto))
+}else if (evento.target.id == "johto"){
+    drawPokemon(data.pokemon.filter(region_johto))
 }
-
   //console.log(resultadoFiltro) 
 }
  botones.forEach(boton => {
     boton.addEventListener("click" ,cuandoSeHaceClick);
 })
-          //////Ordenando pokemones numerica y alfabeticamente////
-//document.getElementById('asc').addEventListener('click', sorting_asc)
-
-//       let sortd = `<img src="${data.pokemon.img}">`;
-//       document.getElementById('dsc').addEventListener('click', sorting(sortd));
-//       document.getElementById('dsc').innerHTML 
-      //  BULBASAUR.addEventListener('change', (e)=>{
-      //}).
-//         console.log(sortd)
-    
-//
-
-          
+       
 
 //console.log(example, data);
 // //console.log((data.pokemon.type))

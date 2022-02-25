@@ -77,11 +77,14 @@ body{
      border-radius: 10px;
      height: 30px;
 }
-#container{
+#container_kanto_johto{
     padding: 0px 180px 0px 180px;
     font-family: "lato";
 }
-/* YA SE PORQUE TITTLE NO JALABA,LO ESTABAMOS LLAMANDO DOS VCES JEJE */
+#regions_filters{
+    display: flex;
+    flex-wrap: wrap;    
+}  
 #title1{
     display: flex;
     justify-content: center;

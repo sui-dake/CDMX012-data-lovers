@@ -7,7 +7,8 @@ header{
 }
 #logo {
     display: flex;
-    justify-content: flex-end;
+    
+    align-items: center;
     width: 140px;
     height: 90px;
 }
@@ -115,7 +116,9 @@ body{
     height: 240px;
     width: 458px;
     padding: 50px;
-
+    border-radius: 40px;
+    opacity: 20%;
+    
 }
 #img_johto{
     height: 240px;

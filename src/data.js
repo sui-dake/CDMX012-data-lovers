@@ -1,6 +1,6 @@
 export  const normal = (token) => {
-  if (token.type[0] == 'normal' ) {
-    return true;
+ if (token.type[0] == 'normal' ) {
+    return true; 
   } else if (token.type[1] == 'normal' ){
     return true;
   } 
@@ -161,8 +161,16 @@ export  const fairy = function (token) {
     return false;   
  };                   
 
-
-
+export const region_kanto = function (token){
+  if (token.generation.name == "kanto"){
+    return true;
+  } return false;
+}
+export const region_johto = function (token){
+  if (token.generation.name == "johto"){
+    return true;
+  } return false;
+}
 
 // WEAKNESSES //
 // export  const wfire = (token) => {
@@ -173,9 +181,6 @@ export  const fairy = function (token) {
 //   } 
 //   return false;
 // };
-
-/// ESTAS SI SIRVEN :)   ///
-
 
 
 export const sorting = (pkmn) => {
@@ -221,10 +226,11 @@ export const sort_name_dsc = (pkmn) => {
 
 
   export function celebi(pkmn){
-    return `<div id= ejemplo><h3 id="card_name">${pkmn.name}</h3>
-     <img src="${pkmn.img}">${pkmn.generation.name}
-     <br><p id="type_button">${pkmn.type}
-     </p>
+    return `<div id= ejemplo><h3 id="card_name">${pkmn.num} ${pkmn.name}</h3>
+     <img src="${pkmn.img}">
+     
+     <br><p id="all_badges">${pkmn.type}</p> egg: ${pkmn.egg} candy ${pkmn.evolution.candy}
+     
     </div> `
   }
              /////////TODO ESTO ES NUEVO//////
@@ -234,20 +240,4 @@ export const sort_name_dsc = (pkmn) => {
    })
   }
   
-  export function  unown(pkmn){
-    return `${pkmn.name}
-     <img src="${pkmn.img}">
-     `
-  }
 
-
-  export function temporalFilter (allPokes, pokeType) {
-    let pokesWithType = [];
-    allPokes.forEach((pokemon) => {
-      let type = pokemon.type;
-      if (type.includes(pokeType)) {
-        pokesWithType.push(pokemon);
-    }
-  
-    return pokesWithType;
-  })}
