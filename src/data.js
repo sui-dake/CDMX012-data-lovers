@@ -172,6 +172,15 @@ export const region_johto = function (token){
   } return false;
 }
 
+// export function suma_IVS2(pkmn){
+//   return `<div id= ejemplo><h3 id="card_name">${pkmn.num} ${pkmn.name}</h3>
+//    <img src="${pkmn.img}">
+   
+//    <br><p id="all_badges">${pkmn.type}</p> egg: ${pkmn.egg} candy ${pkmn.evolution.candy}
+   
+//   </div> `
+// }
+
 // WEAKNESSES //
 // export  const wfire = (token) => {
 //   if (token.type[0] == 'fire' ) {
@@ -181,6 +190,53 @@ export const region_johto = function (token){
 //   } 
 //   return false;
 // };
+
+// export const suma_IVS = function (token){
+ 
+  
+// }  
+
+
+
+export const best_ivs = (token) =>{
+
+  return token.sort((a, b)=>{
+    if (((parseInt(a.stats['base-attack'])+ 
+    parseInt(a.stats['base-defense'])+
+    parseInt(a.stats['base-stamina']))/3) > ((parseInt(b.stats['base-attack'])+
+    parseInt(b.stats['base-defense'])+
+    parseInt(b.stats['base-stamina']))/3)) {
+      return -1;
+    } else if (((parseInt(a.stats['base-attack'])+ 
+    parseInt(a.stats['base-defense'])+
+    parseInt(a.stats['base-stamina']))/3) < ((parseInt(b.stats['base-attack'])+
+    parseInt(b.stats['base-defense'])+
+    parseInt(b.stats['base-stamina']))/3)){
+      return 1;
+    }
+    return 0;
+  })
+}
+
+export const worst_ivs = (token) =>{
+
+  return token.sort((a, b)=>{
+    if (((parseInt(a.stats['base-attack'])+ 
+    parseInt(a.stats['base-defense'])+
+    parseInt(a.stats['base-stamina']))/3) > ((parseInt(b.stats['base-attack'])+
+    parseInt(b.stats['base-defense'])+
+    parseInt(b.stats['base-stamina']))/3)) {
+      return 1;
+    } else if (((parseInt(a.stats['base-attack'])+ 
+    parseInt(a.stats['base-defense'])+
+    parseInt(a.stats['base-stamina']))/3) < ((parseInt(b.stats['base-attack'])+
+    parseInt(b.stats['base-defense'])+
+    parseInt(b.stats['base-stamina']))/3)){
+      return -1;
+    }
+    return 0;
+  })
+}
 
 
 export const sorting = (pkmn) => {
@@ -226,18 +282,37 @@ export const sort_name_dsc = (pkmn) => {
 
 
   export function celebi(pkmn){
-    return `<div id= ejemplo><h3 id="card_name">${pkmn.num} ${pkmn.name}</h3>
-     <img src="${pkmn.img}">
+    return `<div class="ejemplo"><h3 id="card_name">${pkmn.num} ${pkmn.name}</h3>
+     <img id="img" src="${pkmn.img}">
+     <p id="card_type">${pkmn.type}</p> 
+     <img id="egg" src="../src/Logos pokemon/egg.png" alt="Egg"> ${pkmn.egg} 
+     <p><img id="candy" src="../src/Logos pokemon/candy.jpg" alt="Candy"> Buddy Distance: ${pkmn['buddy-distance-km']}km</p>
      
-     <br><p id="all_badges">${pkmn.type}</p> egg: ${pkmn.egg} candy ${pkmn.evolution.candy}
-     
-    </div> `
+    
+    
+     </div> `
   }
              /////////TODO ESTO ES NUEVO//////
-  export function filtroNombre(lucario, criterioCoincidencia){
-   return lucario.filter(function(riolu){
-   return riolu.name == criterioCoincidencia
-   })
+             //Average IVs: ${parseInt((parseInt(pkmn.stats['base-attack'])+parseInt(pkmn.stats['base-defense'])+parseInt(pkmn.stats['base-stamina']))/3)}
+  
+import { drawPokemon } from './main.js';
+import { pokemonList } from './main.js';
+
+
+  export function filtroNombre(){
+    let box = document.getElementById("search_input").value.toLowerCase();
+    let filtrados = new Array();
+    //for(const pokemon of pokemonList){
+    for (const pokemon of pokemonList){
+      if(pokemon.name.includes(box)){
+        filtrados.push(pokemon);
+        //console.log(filtrados)
+      }
+    }
+    return filtrados
   }
+   
+   
+  
   
 

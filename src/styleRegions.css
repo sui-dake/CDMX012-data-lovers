@@ -39,12 +39,12 @@ body{
      align-items: flex-end;
      justify-content: flex-end;  
 } */
-#searchbtn{
+#search_input{
      border-radius: 30px;
      text-align: center;
      font-size: 18px;
 }
-.search_go{
+#search_go{
     border-radius: 20px;
     font-size: 20px;
     text-align: center;
@@ -116,7 +116,18 @@ body{
     width: 100px;
 }
 
+#regions_filters{
+    display: flex;
+    justify-content: space-around;
+}
                     /* TYPE BUTTONS */
+
+#kanto{
+    background-color: #6e83b1;
+}
+#johto{
+    background-color: #6e83b1;
+}
 #normal{
     background-color: #AAAA99;
 }
@@ -256,20 +267,27 @@ body{
     flex-wrap: wrap;
     gap: 5em;
 }
-#ejemplo{
-    /* display: flex;
-    flex-direction: column; */
+.ejemplo{
+     /* display: flex;
+    flex-direction: column;  */
     text-align: center;
     font-family: "lato", sans-serif;
     font-size: 20px;
     font-weight: bold;
     text-transform: capitalize;
-    background: #d2ecd7;
+     background: #d2ecd7;  
     opacity: 90%;
-    border: 2px solid rgb(231, 250, 223);
+    border: 2px solid rgb(73, 80, 70);
 }
 #card_name{
     font-size: 30px;
+    background: #c0f5ca;
+    border: 2px solid #212722;
+}
+#img{
+    border: 2px solid #212722;
+    background-color: #608066; 
+    opacity: 95%;
 }
         /* FOOTER */
  footer{
@@ -300,9 +318,23 @@ body{
 
 }
 
-
-
-
+#normal_ejemplo{
+    background-color: #AAAA99;
+    border: 5px solid #0C1C3E;
+}
+#candy{
+    height: 20px;
+    width: 20px;
+    border-radius: 10px;
+}
+#egg{
+    height: 20px;
+    width: 20px;
+}
+#card_type{
+    border: 2px solid #030811;
+    background: #6666BB;
+}
 /* 
 #container_gen{
     display: flex;

@@ -27,13 +27,15 @@
         <option value="sorting">  Number descending</option>
         <option value="sort_name_asc">  A - Z</option>
         <option value="sort_name_dsc">  Z - A </option>
+        <option value="best_ivs">  Best IVs </option>
+        <option value="worst_ivs">  Worst IVs </option>
       </select>
 
               <!-- SEARCH BUTTON  -->
       <hidden>
       <div id="search_form">
-          <input type="text" id="searchbtn" placeholder="Search">      
-          <button type="button" class="search_go" value="GO"> GO </button>
+          <input type="text" id="search_input" placeholder="Search">      
+          <button type="button" id="search_go" value="GO"> GO </button>
       </div></div>
     </hidden>
       </form>
@@ -42,10 +44,10 @@
       <h2 id="title1">Let's GO to explore the regions of Kanto and Johto!</h2></div>
       <div class="container_kanto_johto">
       <div id="regions_filters">
-      <button class="type_button" id="kanto" value="kanto">KANTO </button>
+      <button class="type_button" id="kanto" value="kanto">KANTO </button> 
       <button class="type_button" id="johto" value="johto">JOTHO</button> 
-      
       </div>
+
           <!-- TYPES AND BADGES BUTTONS -->
           <div id="all_badges">
           <section id="b_normal"><button class="type_button" id="normal" value= "normal">NORMAL</button>

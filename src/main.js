@@ -23,10 +23,14 @@ import { fairy } from './data.js';
 import { region_johto } from './data.js';
 import { region_kanto } from './data.js';
 import { celebi } from './data.js';
-import {filtroNombre} from './data.js';
+import { filtroNombre } from './data.js';
 import data from './data/pokemon/pokemon.js';
+//import { suma_IVS } from './data.js';
+import { best_ivs } from './data.js';
+import { worst_ivs } from './data.js';
 
-
+/// console.log (suma_IVS((data.pokemon[24])));
+//console.log (suma_IVS((data.pokemon[]).filter(steel)));
  ///////////// SEARCH BUTTON FUNCTION ////////////
 // let search_val = document.getElementById('searchbtn')
 // console.log(search_val);
@@ -51,41 +55,104 @@ import data from './data/pokemon/pokemon.js';
 //     nodoIvysaur.innerHTML = recibo
 // })
 
-    
+           /// SI SIRVE, OBTIENE EL NOMBRE QUE ESCRIBAS EN PANTALLA
+// document.getElementById("search_go").addEventListener('click', function ditto 
+//   () {
+//      lucario.innerHTML ="";
+//      let output = '';
+//      output +=  celebi(ditto(filtroNombre()));
+//      lucario.innerHTML = output;
+//     },
+//     false   
+// );
+
+
+
+ 
+// button.addEventListener("click", getText);
+
+
+// let resultName = "";
+// function getText(unPoke) {
+//     let box = document.getElementById("search_input").value;   
+// console.log(box)
+// if(box == data.pokemon.name){
+//     resultName += celebi(unPoke)
+//     box.innerHTML=resultName;
+//     console.log(hola)
+// } return "no existe pokemon"
+// }
+// let resultName = "";
+// let gastly = '';
+// const button = document.getElementById("search_go");
+// const gengar = function getTe.xt(unPoke) {
+
+// button.addEventListener("click", gengar);
+
+// data.pokemon.forEach(pkmon =>{
+//     resultName +=celebi(pkmon)
+// })
+
+
+//     let box = document.getElementById("searchbtn").value;   
+// console.log(box)
+// if(gastly == data.pokemon.name){
+//     unPoke.forEach(name =>{
+//         gastly += celebi(name);
+//         box.innerHTML= gastly;
+//     })   
+// } return "no existe pokemon"
+// }
+const lucario = document.getElementById("bulbasaur");
 const pikachu = document.getElementById("bulbasaur");
 const entei = document.getElementById("bulbasaur"); 
 const raichu = document.getElementById("options");
-
+const nodoIvysaur = document.getElementById('bulbasaur');
+ 
           //////Ordenando pokemones numerica y alfabeticamente ////
 let mew = '';
 let mew2 = '';
 let mew3 = '';
 let mew4 = '';
+let mew5 = '';
+let mew6 = '';
 let dexx = ""; 
 let todoElHTML =""; 
 
+
+
+
 raichu.addEventListener('change', (evento)=>{
     if(evento.target.value == 'sort_name_asc'){
-    sort_name_asc(data.pokemon, evento.target.value ).forEach(mewtwo =>{
+    sort_name_asc(data.pokemon).forEach(mewtwo =>{
       mew += celebi(mewtwo)
       pikachu.innerHTML=mew;
      })} else if(evento.target.value == 'sort_name_dsc'){
-    sort_name_dsc(data.pokemon, evento.target.value ).forEach(mewtwo =>{
+    sort_name_dsc(data.pokemon).forEach(mewtwo =>{
      mew2 += celebi(mewtwo)
      pikachu.innerHTML=mew2;
      })} else if(evento.target.value == 'sorting'){
-    sorting(data.pokemon, evento.target.value ).forEach(mewtwo =>{
+    sorting(data.pokemon).forEach(mewtwo =>{
         mew3 += celebi(mewtwo)
         pikachu.innerHTML=mew3;
      })} else if(evento.target.value == 'sorting_asc'){
-     sorting_asc(data.pokemon, evento.target.value ).forEach(mewtwo =>{
+     sorting_asc(data.pokemon).forEach(mewtwo =>{
         mew4 += celebi(mewtwo)
         pikachu.innerHTML=mew4;
-    })}
+     })} else if(evento.target.value == 'best_ivs'){
+        best_ivs(data.pokemon).forEach(mewtwo =>{
+        mew5 += celebi(mewtwo)
+        pikachu.innerHTML=mew5;
+     })} else if(evento.target.value == 'worst_ivs'){
+        worst_ivs(data.pokemon).forEach(mewtwo =>{
+        mew6 += celebi(mewtwo)
+        pikachu.innerHTML=mew6;
+     })}
+
 })
 
 
-const nodoIvysaur = document.getElementById('bulbasaur')   
+  
 
 data.pokemon.forEach(pkmn =>{
     todoElHTML+= celebi(pkmn)
@@ -93,7 +160,7 @@ data.pokemon.forEach(pkmn =>{
 
 nodoIvysaur.innerHTML=todoElHTML
 
-function drawPokemon (arreglo){
+export const drawPokemon = (arreglo) => {
     if(dexx == ''){
         arreglo.forEach(type =>{
         dexx += celebi(type);
@@ -110,11 +177,16 @@ function drawPokemon (arreglo){
     
  }
 
+ 
+ export const pokemonList = data.pokemon;
+    
+
+
 
 const botones = document.querySelectorAll(".type_button");
  botones.innerHTML = " ";
 const cuandoSeHaceClick = function (evento) {
-    if (evento.target.id == "normal"){   
+if (evento.target.id == "normal"){   
     drawPokemon(data.pokemon.filter(normal))
 }else if (evento.target.id == "fire"){
     drawPokemon(data.pokemon.filter(fire))  
@@ -162,8 +234,7 @@ const cuandoSeHaceClick = function (evento) {
 })
        
 
-//console.log(example, data);
-// //console.log((data.pokemon.type))
+// console.log(data.pokemon.name);
 // console.log((data.pokemon).filter(normal)); 
 // console.log((data.pokemon).filter(fire));  
 // console.log((data.pokemon).filter(water));
@@ -183,9 +254,8 @@ const cuandoSeHaceClick = function (evento) {
 // console.log((data.pokemon).filter(steel));
 // console.log((data.pokemon).filter(fairy));
 // console.table(sorting(data.pokemon));
-//console.table(sorting_asc(data.pokemon));
-//console.table(sort_name_asc(data.pokemon));
+// console.table(sorting_asc(data.pokemon));
+// console.table(sort_name_asc(data.pokemon));
 // console.log(temporalFilter (allPokes, pokeType));
-
 
 
