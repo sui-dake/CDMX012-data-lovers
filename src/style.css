@@ -1,54 +1,45 @@
-            /* HEADER */
+         /* HEADER */
 header{
-    /* background: #0C1C3E; */
     display: flex;
-    align-content: center;
+    justify-content:space-between;
+    align-items: center;
+    background: #0C1C3E;
+    position: relative;
 }
-#header{
-    
-   
-   
-background: peru;
-}
-#hdr_logo{
+ #hdr_logo{
     background-color: aquamarine;
-     display: flex;
-    justify-content: flex-start; 
-    flex-direction: row; 
-}
+    justify-content: flex-start;  
+    align-items: center; 
+    padding: .3rem;
+} 
 #logo {
     width: 130px;
     height: 85px;
 }
 #hdr_btns{
-    background-color: pink;
-    display: flex;
-    justify-content: space-between; 
+    background-color: pink; 
+    align-items: center; 
+    justify-content: space-around;
+    padding: 5px 300px 5px 100px
 }
 .btn_header{
-   display: flex;
-     justify-content: space-between;  
-    border: 1px solid white;
-    border-radius: 10px;
-    padding: 4px 40px;
-    color: white;
-    background-color: #0C1C3E;
-    font-size: 18px;
-    text-decoration: none;
-    cursor: pointer;
-    text-align: center;
+   border: 1px solid white;
+   border-radius: 10px;
+   padding: 4px 40px;
+   color: white;
+   background-color: #0C1C3E;
+   font-size: 18px;
+   text-decoration: none;
+   cursor: pointer;
+   text-align: center;
+   font-family: "lato", sans-serif;
+}
+         /*CONTAINER WELCOME*/
+body{
+    background-color: #0C1C3E; 
     font-family: "lato", sans-serif;
 }
-
-body{
-    /* background-color: #0C1C3E; */
-
-}
-
-
-
-               /* CONTAINER WELCOME */
-#container{
+#container_welcome{
     background-image: url("https://lh3.googleusercontent.com/FlD4SqNV1oWy2LpHzxoJGVyCbljK5wsYw_2RtOxIoZFj4NvbjWHdmJ-PmmnP59twgTCE6DQuSolIFOdwRZspobtASJUjh8hqzvS0zXriWpUJjD8=rw-e365-w1440");
     background-attachment: fixed;
     background-position: center center;
@@ -58,7 +49,7 @@ body{
     color: white;
     font-weight: bold;
     text-align: center;
-    padding: 6%;
+    padding: 9%;
 }
 #title1{
     font-size: 45px;
@@ -68,23 +59,11 @@ body{
     font-size: 24px;
     text-shadow: rgb(46, 46, 46) 3px 3px 4px;
 }
-#title3{
-    font-size: 30px;
-    text-shadow: rgb(46, 46, 46) 4px 3px 4px;
-}
-#container_logo{
+#welcome_logo{
     height: 128px;
     width: 210px;
 }
-#logos_download{
-    height: 46px;
-    width: 150px;
-    border-radius: 10px;
-    border: 1px white solid;
-    cursor: pointer;
-}
-
-               /* CONTAINER NEW TRAINER */
+         /* CONTAINER NEW TRAINER */
 #container_new_trainer{
     display: flex;
     justify-content: center;
@@ -93,10 +72,13 @@ body{
     padding: 15px;
     font-family: "lato", sans-serif;
     font-size: 20px;
+    align-items: center;
 }
 #pokes_new_1{
     height: 115px;
     width: 115px;
+    align-items: center;
+    padding: 1rem;
 }
 #boton_101{
     border: 2px solid #0061af;
@@ -106,13 +88,15 @@ body{
     background-color: #FFFFFF;
     font-size: 17px;
     cursor: pointer;
+    text-decoration: none;
 }
 #pokes_new{
     height: 130px;
     width: 320px;
+    padding: 1rem;
 }
-               /*REGIONS*/
-#container_gen{
+         /* CONTAINER REGIONS*/
+#container_regions{
     display: flex, inline-block;
     justify-content: space-between;
     background-image: url(https://lh3.googleusercontent.com/4I4XB51OZpQL-JuSUcd8yrchFvAXJrK405d6CtVX9hXOqAC4vFTeuwFACbVzPSCOEeRtMHlLqA33rvlcnGb3FPTSfOuusljfWH9sf1U45Aaq=rw-e365-w1440);                                      
@@ -120,26 +104,21 @@ body{
     text-align: center;
     padding: 80px;
 }
-#section_Regions{
+#section_regions{
     font-size: 45px;
     font-family: "lato", sans-serif;
     font-weight: bolder;
+    padding-bottom: 100px;
 }
-#img_kanto{
-    height: 240px;
-    width: 458px;
-    padding: 50px;
+#img_regions{
+    height: 270px;
+    width: 490px;
     border-radius: 40px;
-    opacity: 20%;
-    
-}
-#img_johto{
-    height: 240px;
-    width: 458px;
-    padding: 50px;
+    border: 3px solid rgb(8, 36, 8);
+    opacity: 90%;
 }
 
-        /* CONTAINER DOWNLOAD */
+         /* CONTAINER DOWNLOAD */
 #container_download{
     display: flex;
     justify-content: space-around;
@@ -147,12 +126,19 @@ body{
     padding: 15px;
     background-image: url(https://lh3.googleusercontent.com/d3MUt9qnSpEQTo_yOpwf9wefXSrAbGeFT1uo69kPu0piUpx3dt7k99rRpaMZAM3rV-MwVSZe8sGuPHmFKnmwP-2S2jE8KnJnvXo2-MsaMa2B-hI=rw-e365-w1440);
     background-size: cover;
-    font-family: "lato", 'Courier New', Courier, monospace;
+    font-family: "lato", Courier, monospace;
     font-size: 36px;
     color: white;
     font-weight: bolder;
 }
-#logo_container{
+.dl_store{
+    height: 46px;
+    width: 150px;
+    border-radius: 10px;
+    border: 1px white solid;
+    cursor: pointer;
+}
+#logo_download{
     height: 170px;
     width: 260px;
 }
@@ -166,16 +152,17 @@ body{
     width: 70px;
 }
 
-        /* FOOTER */
+         /* FOOTER */
 footer{
     display: flex;
     justify-content: space-around;
     background: #FFFFFF;
     padding: 15px;
 }
-#logo_redessociales{
+.logo_sn{
     height: 55px;
     width: 55px;
+    border-radius: 50px;
 }
 #logo_laboratoria{
     height: 50px;

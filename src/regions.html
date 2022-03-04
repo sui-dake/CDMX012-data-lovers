@@ -7,42 +7,38 @@
     <link rel="stylesheet" href="styleRegions.css" />
   </head>
   <body>
+     <!-- HEADER -->
     <header>
-        
            <img id="logo" src="../src/Logos pokemon/Logo PokemonGo.png" alt="logo">
-           <a class="btn_header" href="">About</a>
-           <a class="btn_header" href="https://pokemondb.net/type">Type-list</a>
            <a class="btn_header" href="#section_Regions">Regions</a>
-           <a class="btn_header" href="https://pokemongolive.com/en/events/">Events</a>
-        
+           <a class="btn_header" href="https://pokemondb.net/type" target="_blank">Type-list</a>
+           <a class="btn_header" href="https://pokemongolive.com/en/events/" target="_blank">Events</a>
+           <a class="btn_header" href="https://pokemongolive.com/en/" target="_blank">About</a>
       </header> 
-      <div id="return_main">
-        </div>
-              <!-- ORDENADO -->
-      <div id="search_options">
-        <a href="index.html"><img id="pokedex" src="../src/Logos pokemon/Pokedex.png" alt="Pokedex"></a>
+      
+     <!-- SORTING -->
+      <div id="container_functions">
+       <a href="index.html"><img id="pokedex" src="../src/Logos pokemon/Pokedex.png" alt="Pokedex"></a> 
+      <div id="search_options">  
       <select name="options" id="options">
         <option value="optns">  Options</option>
         <option value="sorting_asc">  Number ascending</option>
-        <option value="sorting">  Number descending</option>
+        <option value="sorting_dsc">  Number descending</option>
         <option value="sort_name_asc">  A - Z</option>
         <option value="sort_name_dsc">  Z - A </option>
         <option value="best_ivs">  Best IVs </option>
         <option value="worst_ivs">  Worst IVs </option>
       </select>
-
+     
               <!-- SEARCH BUTTON  -->
-      <hidden>
       <div id="search_form">
           <input type="text" id="search_input" placeholder="Search">      
           <button type="button" id="search_go" value="GO"> GO </button>
       </div></div>
-    </hidden>
-      </form>
+      </div>   
 
-                          <!-- REGIONS -->               
-      <h2 id="title1">Let's GO to explore the regions of Kanto and Johto!</h2></div>
-      <div class="container_kanto_johto">
+                <!-- REGIONS -->               
+      <h2 id="title1">Let's GO to explore the regions of Kanto and Johto!</h2>
       <div id="regions_filters">
       <button class="type_button" id="kanto" value="kanto">KANTO </button> 
       <button class="type_button" id="johto" value="johto">JOTHO</button> 
@@ -87,27 +83,21 @@
           <section id="b_fairy"><button class="type_button" id="fairy" value= "fairy">FAIRY</button>
             <img class="Little_Badges" src="../src/Logos pokemon/B.hada.png" alt="FAIRY"></section>
           </div>
-          <script>
-            
-          </script>
-        <div id="bulbasaur">         
+         
+        <div id="root">         
         </div>
-        <div id="ivysaur">
-        
-   
-
-
+       
+  </body>
            <!-- FOOTER --> 
    <footer>
     <img id="logo_laboratoria" src="../src/Logos pokemon/Logo Laboratoria.png">
     <p> Laboratoria 2022 / Proyecto DataLovers <br> Denisse Molina - Sui Flores </p>
-    <aside><img id="logo_redessociales" src="../src/Logos pokemon/twitter.png" alt="Twitter">
-    <img id="logo_redessociales" src="../src/Logos pokemon/instagram.png" alt="Instagram">
-    <img id="logo_redessociales" src="../src/Logos pokemon/facebook.png" alt="Facebook">
-    <img id="logo_redessociales" src="../src/Logos pokemon/youtube.png" alt="Youtube"></aside>
+    <aside><img class="logo_sn" src="../src/Logos pokemon/twitter.png" alt="Twitter">
+    <img class="logo_sn" src="../src/Logos pokemon/instagram.png" alt="Instagram">
+    <img class="logo_sn" src="../src/Logos pokemon/facebook.png" alt="Facebook">
+    <img class="logo_sn" src="../src/Logos pokemon/youtube.png" alt="Youtube"></aside>
     <a href="#logo"><img id="back_to_top" src="../src/Logos pokemon/Back_to_top.jpg" alt="b_t_t"></a>
     </footer>   
-    <div id="root"></div>
     <script src="main.js" type="module"></script>
-  </body>
+
 </html>
