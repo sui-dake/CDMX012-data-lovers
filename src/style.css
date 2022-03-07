@@ -1,43 +1,35 @@
-         /* HEADER */
-header{
+*{
+    font-family: "lato", sans-serif;
+ }
+/* Header */
+ header{
     display: flex;
-    justify-content:space-between;
+    justify-content: space-evenly;
     align-items: center;
     background: #0C1C3E;
-    position: relative;
 }
- #hdr_logo{
-    background-color: aquamarine;
-    justify-content: flex-start;  
-    align-items: center; 
-    padding: .3rem;
-} 
 #logo {
-    width: 130px;
-    height: 85px;
-}
-#hdr_btns{
-    background-color: pink; 
-    align-items: center; 
-    justify-content: space-around;
-    padding: 5px 300px 5px 100px
+    width: 140px;
+    height: 90px;
+    padding: 1rem;
 }
 .btn_header{
-   border: 1px solid white;
-   border-radius: 10px;
-   padding: 4px 40px;
-   color: white;
-   background-color: #0C1C3E;
-   font-size: 18px;
-   text-decoration: none;
-   cursor: pointer;
-   text-align: center;
-   font-family: "lato", sans-serif;
+    border: 1px solid white;
+    border-radius: 10px;
+    padding: 4px 40px;
+    color: white;
+    background-color: #0C1C3E;
+    font-size: 18px;
+    text-decoration: none;
+    cursor: pointer;
+    width: 75px;
+    height: 25px;
+    text-align: center;
 }
+
          /*CONTAINER WELCOME*/
 body{
     background-color: #0C1C3E; 
-    font-family: "lato", sans-serif;
 }
 #container_welcome{
     background-image: url("https://lh3.googleusercontent.com/FlD4SqNV1oWy2LpHzxoJGVyCbljK5wsYw_2RtOxIoZFj4NvbjWHdmJ-PmmnP59twgTCE6DQuSolIFOdwRZspobtASJUjh8hqzvS0zXriWpUJjD8=rw-e365-w1440");
@@ -45,7 +37,6 @@ body{
     background-position: center center;
     background-size: cover;
     background-repeat: no-repeat;
-    font-family: "lato", sans-serif;
     color: white;
     font-weight: bold;
     text-align: center;
@@ -63,6 +54,7 @@ body{
     height: 128px;
     width: 210px;
 }
+
          /* CONTAINER NEW TRAINER */
 #container_new_trainer{
     display: flex;
@@ -70,7 +62,6 @@ body{
     background-image: url("https://lh3.googleusercontent.com/5-w5yrCLD69zlOIfgMndRr4dMhrKW5u8nJVojvrUqnSI8ln1ywgqzNFjWQJYrN2YlVSBMHNyXzhcIrQXRPUYTcqJXjAzYbJyXiXb_uK3YO2G-g=rw-e365-w1440");
     background-size: cover;
     padding: 15px;
-    font-family: "lato", sans-serif;
     font-size: 20px;
     align-items: center;
 }
@@ -95,6 +86,7 @@ body{
     width: 320px;
     padding: 1rem;
 }
+
          /* CONTAINER REGIONS*/
 #container_regions{
     display: flex, inline-block;
@@ -106,9 +98,11 @@ body{
 }
 #section_regions{
     font-size: 45px;
-    font-family: "lato", sans-serif;
     font-weight: bolder;
-    padding-bottom: 100px;
+}
+#inpage_text{
+    font-size: 25px;
+
 }
 #img_regions{
     height: 270px;
@@ -126,7 +120,6 @@ body{
     padding: 15px;
     background-image: url(https://lh3.googleusercontent.com/d3MUt9qnSpEQTo_yOpwf9wefXSrAbGeFT1uo69kPu0piUpx3dt7k99rRpaMZAM3rV-MwVSZe8sGuPHmFKnmwP-2S2jE8KnJnvXo2-MsaMa2B-hI=rw-e365-w1440);
     background-size: cover;
-    font-family: "lato", Courier, monospace;
     font-size: 36px;
     color: white;
     font-weight: bolder;

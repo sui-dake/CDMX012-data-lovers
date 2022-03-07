@@ -1,3 +1,4 @@
+ import data from './data/pokemon/pokemon.js';
 export  const normal = (token) => {
  if ((token.type[0] === 'normal' ) ||(token.type[1] === 'normal' )) {
     return true; 
@@ -210,8 +211,7 @@ export function poke_cards(pkmn){
      </div> `
   }
              /////////SEARCH FILTER//////
-             //${pkmn['quick-move'].name} 
-import { pokemonList } from './main.js';
+const pokemonList = data.pokemon;
 export function name_filter(){
     let box_text = document.getElementById("search_input").value.toLowerCase();
     let filtered = new Array();

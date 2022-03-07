@@ -29,8 +29,9 @@ import { best_ivs } from './data.js';
 import { worst_ivs } from './data.js';
 //import { wfire } from './data.js';
         ////SEARCH BUTTON FUNCTION ////
-export const pokemonList = data.pokemon;           
-const searching = document.getElementById("search_go").addEventListener('click', function() {
+
+//let searching = "";         
+document.getElementById("search_go").addEventListener("click", function() {
     print_poke.innerHTML ="";
      let output = '';
      let names = name_filter();
@@ -40,7 +41,6 @@ const searching = document.getElementById("search_go").addEventListener('click',
      print_poke.innerHTML = output;
     }, false
 );
-searching; 
 
 
 const print_poke = document.getElementById("root");
