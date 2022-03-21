@@ -1,0 +1,343 @@
+ /* css normalization  */
+ body,
+ div,
+ dl,
+ dt,
+ dd,
+ ul,
+ ol,
+ li,
+ h1,
+ h2,
+ h3,
+ h4,
+ h5,
+ h6,
+ pre,
+ form,
+ fieldset,
+ input,
+ textarea,
+ p,
+ blockquote,
+ th,
+ td, 
+ footer{
+   margin: 0;
+   padding: 0;
+ }
+ *{
+    font-family: "lato", sans-serif;
+ }
+
+ /* HEADER */
+header{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    background: #0C1C3E;
+}
+#logo {
+    width: 140px;
+    height: 90px;
+    padding: 1rem;
+}
+.btn_header{
+    border: 1px solid white;
+    border-radius: 10px;
+    padding: 4px 40px;
+    color: white;
+    background-color: #0C1C3E;
+    font-size: 18px;
+    text-decoration: none;
+    cursor: pointer;
+    width: 75px;
+    height: 25px;
+    text-align: center;
+}
+body{
+    background-image: url(https://lh3.googleusercontent.com/4I4XB51OZpQL-JuSUcd8yrchFvAXJrK405d6CtVX9hXOqAC4vFTeuwFACbVzPSCOEeRtMHlLqA33rvlcnGb3FPTSfOuusljfWH9sf1U45Aaq=rw-e365-w1440);
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center center;
+    background-size: cover;
+}
+
+/* SORTING */
+#search_options{
+    display: flex;
+    justify-content: flex-end;
+    padding: 35px 40px 0px 10px;
+}
+#pokedex{
+    height: 80px;
+    width: 80px;
+    padding: 15px 15px 0px 15px;
+}
+#options{ 
+    margin-right: 60px;
+    font-size: 18px;
+    border: 2px solid #0C1C3E;
+    cursor: pointer;
+    text-align: center;
+    border-radius: 10px;
+    height: 30px;
+}
+
+/* SEARCH BUTTON */
+ #search_form{
+     display: flex;
+     align-items: flex-end;
+     justify-content: flex-end;  
+} 
+#search_input{
+     border-radius: 30px;
+     text-align: center;
+     font-size: 18px;
+}
+#search_go{
+    border-radius: 20px;
+    font-size: 20px;
+    text-align: center;
+    height: 29px;
+    width: 60px;
+    color: #0C1C3E;
+    background-color: #76eccb;
+    border-style: outset;
+    border-color: #0C1C3E;
+    border-width: 2px;
+    cursor: pointer;
+}
+
+/* REGIONS  */
+#title1{
+    display: flex;
+    justify-content: center;
+    color: black;
+    font-size: 45px;
+    font-weight: bold;
+}
+#regions_filters{
+    display: flex;
+    justify-content: space-around;
+}
+.type_button{
+    border-radius: 7px; 
+    text-shadow: rgb(44, 44, 44) 2px 2px 4px;
+    font-size: 18px;
+    font-weight: bold;
+    color: white;
+    height: 35px;
+    width: 99px;
+    cursor: pointer;
+}
+
+/* TYPES AND BADGES BUTTONS */
+#all_badges{
+    display: flex;
+   justify-content: space-around;
+   flex-wrap: wrap;
+   gap: 2em;
+   padding: 50px;
+}
+.Badges{
+    height: 80px;
+    width: 80px;
+}
+.Little_Badges{
+    height: 95px;
+    width: 100px;
+}
+#kanto, #johto{
+    background-color: #6e83b1;
+}
+#normal{
+    background-color: #AAAA99;
+}
+#b_normal{
+    display: flex;
+    flex-direction: column;
+}
+#fire{
+    background-color: #FF4422;
+}
+#b_fire{
+    display: flex;
+    flex-direction: column;
+}
+#water{
+    background-color: #3399FF;
+}
+#b_water{
+    display: flex;
+    flex-direction: column;
+}
+#electric{
+    background-color: #FFCC33;
+}
+#b_electric{
+    display: flex;
+    flex-direction: column;
+}
+#grass{
+    background-color: #77CC55;
+}
+#b_grass{
+    display: flex;
+    flex-direction: column;
+}
+#ice{
+    background-color: #66CCFF;
+}
+#b_ice{
+    display: flex;
+    flex-direction: column;
+}
+#fighting{
+    background-color: #BB5544;
+}
+#b_fighting{
+    display: flex;
+    flex-direction: column;
+}
+#poison{
+    background-color: #AA5599;
+}
+#b_poison{
+    display: flex;
+    flex-direction: column;
+}
+#ground{
+    background-color: #DDBB55;
+}
+#b_ground{
+    display: flex;
+    flex-direction: column;
+}
+#flying{
+    background-color: #8899FF;
+}
+#b_flying{
+    display: flex;
+    flex-direction: column;
+}
+#psychic{
+    background-color: #FD5497;
+}
+#b_psychic{
+    display: flex;
+    flex-direction: column;
+}
+#bug{
+    background-color: #AABB22;
+}
+#b_bug{
+    display: flex;
+    flex-direction: column;
+}
+
+#rock{
+    background-color: #BBAA66;
+}
+#b_rock{
+    display: flex;
+    flex-direction: column;
+}
+#ghost{
+    background-color: #6666BB;
+}
+#b_ghost{
+    display: flex;
+    flex-direction: column;
+}
+#dragon{
+    background-color: #7766EE;
+}
+#b_dragon{
+    display: flex;
+    flex-direction: column;
+}
+#dark{
+    background-color: #775544;
+}
+#b_dark{
+    display: flex;
+    flex-direction: column;
+}
+#steel{
+    background-color: #AAAABB;
+}
+#b_steel{
+    display: flex;
+    flex-direction: column;
+}
+#fairy{
+    background-color: #EE99EE;
+}
+#b_fairy{
+    display: flex;
+    flex-direction: column;
+}
+#root{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 4em;
+}
+.card_style{
+    text-align: center;
+    font-size: 18px;
+    border-radius: 8px;
+    text-transform: capitalize;
+    background: #d2ecd7;  
+    opacity: 90%;
+    border: 2px solid rgb(73, 80, 70);
+    font-weight: bold;
+}
+#card_name{
+    font-size: 30px;
+    background: #c0f5ca;
+    border: 2px solid #212722;
+    border-radius: 8px;
+}
+#img{
+    border: 2px solid #212722;
+    background-color: #608066; 
+    opacity: 95%;
+}
+#candy{
+    height: 20px;
+    width: 20px;
+    border-radius: 10px;
+}
+#egg{
+    height: 20px;
+    width: 20px;
+}
+#card_type{
+    border: 2px solid #030811;
+    background: #8484d1;
+ font-weight: bold;
+}
+
+/* FOOTER */
+ footer{
+    display: flex;
+    justify-content: space-around;
+    background: #FFFFFF;
+    padding: 15px; 
+}
+.logo_sn{
+    height: 55px;
+    width: 55px;
+    border-radius: 50px;
+}
+#logo_laboratoria{
+    height: 50px;
+    width: 50px; 
+}
+#back_to_top{
+    background-color: none;
+    height: 70px;
+    width: 70px;
+}
